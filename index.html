@@ -1,0 +1,352 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/index_estilos.css" />
+		
+	</head>	
+	<body>
+		<br>
+		<input type="hidden" id="ConnectionId" />
+		<input type="hidden" id="IdParadaOrigen" value="449" />
+		<input type="hidden" id="IdParadaDestino" value="106" />
+		<input type="hidden" />
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+				<div class="row" style="background-color: #616161; border-radius: 7px; padding: 10px;" >
+					<div class="col-md-3">
+						<div class="alert alert-success">
+						  <strong>Origen : </strong> Retiro
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="alert alert-danger">
+						  <strong>Destino : </strong> Mar del plata
+						</div>
+					</div>
+					<div class="col-md-2">
+						<input id="FechaBusqueda" type="date" style="margin-top: 5px; height: 50px;" class="form-control" />
+					</div>
+					<div class="col-md-2">
+						<input type="date" style="margin-top: 5px; height: 50px;" class="form-control" />
+					</div>
+					<div class="col-md-2">
+						<button id="ver_servicios" class="btn btn-md btn-success" style="margin: 5px 15px; height: 50px;"><span class="glyphicon glyphicon-search"></span> Listar servicios</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+				<div style="background-color: #616161; color: white; padding: 5px; border-radius: 7px;">
+					<div class="row">
+						<div class="col-md-6" style="padding: 5px 25px;">
+							IDA | Retiro a Mar del Plata
+						</div>
+						<div class="col-md-2" style="padding: 5px 25px;">
+							<a href='#ventana1' class="btn btn-primary " data-toggle='modal'>Boton #1</a>
+							<div class="modal fade" id="ventana1">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<!-- Header de la ventana -->
+										<div class="modal-header" style="background: #3071a9; color: white;">
+											<button tyle='button' class="close" data-dismiss='modal' aria-hidden='true'><span style="color: white;">&times;</span></button>
+											<h4 class="modal-title">Informar datos del pasajero</h4>
+										</div>
+										
+										<!-- Contenido de la ventana -->
+										<div class="modal-body">
+											<div class="row">
+												<div class="col-md-6">
+													Nombre(s)
+													<input id="nombresId" type="text" class="form-control" />													
+												</div>
+												<div class="col-md-6">
+													Apellido(s)
+													<input id="apellidosId" type="text" class="form-control" />	
+												</div>
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-5">
+													Nacionalidad
+													<select class="form-control" data-val="true" data-val-number="The field NacionalidadId must be a number." data-val-required="Campo requerido" id="NacionalidadId" name="NacionalidadId" tabindex="5">
+														<option value="-1">--------------------------------------------------------</option>
+														<option value="111">Afganistan</option>
+														<option value="110">Albania</option>
+														<option value="113">Alemania</option>
+														<option value="115">Andorra</option>
+														<option value="109">Angola</option>
+														<option value="226">Anguila</option>
+														<option value="307">Antartida</option>
+														<option value="227">Antigua Y Barbuda</option>
+														<option value="228">Antillas Holandesas</option>
+														<option value="116">Arabia Saudita</option>
+														<option value="112">Argelia</option>
+														<option value="1">Argentina</option>
+														<option value="114">Armenia</option>
+														<option value="221">Aruba</option>
+														<option value="229">Ascencion</option>
+														<option value="117">Australia</option>
+														<option value="118">Austria</option>
+														<option value="230">Azerbaidzhan</option>
+														<option value="246">Bahamas</option>
+														<option value="250">Bahrein</option>
+														<option value="120">Bangladesh</option>
+														<option value="231">Barbados</option>
+														<option value="119">Belgica</option>
+														<option value="232">Belice</option>
+														<option value="233">Benin</option>
+														<option value="234">Bermudas</option>
+														<option value="235">Bielorrusia</option>
+														<option value="105">Bolivia</option>
+														<option value="236">Bosnia Herzegovina</option>
+														<option value="237">Botswana</option>
+														<option value="4">Brasil</option>
+														<option value="238">Brunei Darussalam</option>
+														<option value="121">Bulgaria</option>
+														<option value="239">Burkina Faso</option>
+														<option value="219">Burundi</option>
+														<option value="240">Butan</option>
+														<option value="309">Cabo Verde</option>
+														<option value="241">Camboya</option>
+														<option value="123">Camerun</option>
+														<option value="122">Canada</option>
+														<option value="243">Chad</option>
+														<option value="129">Checoslovaquia</option>
+														<option value="13">Chile</option>
+														<option value="124">China</option>
+														<option value="199">Chipre</option>
+														<option value="107">Colombia</option>
+														<option value="244">Colonia De Gibraltar</option>
+														<option value="245">Comoras</option>
+														<option value="247">Congo</option>
+														<option value="125">Corea Del Norte</option>
+														<option value="196">Corea Del Sur</option>
+														<option value="220">Costa De Marfil</option>
+														<option value="126">Costa Rica</option>
+														<option value="127">Croacia</option>
+														<option value="128">Cuba</option>
+														<option value="222">Curazao</option>
+														<option value="130">Dinamarca</option>
+														<option value="312">Dominica</option>
+														<option value="106">Ecuador</option>
+														<option value="133">Egipto</option>
+														<option value="134">El Salvador</option>
+														<option value="206">Emiratos Arabes Unidos</option>
+														<option value="248">Eritrea</option>
+														<option value="136">Escocia</option>
+														<option value="139">Eslovaquia</option>
+														<option value="135">Eslovenia</option>
+														<option value="137">España</option>
+														<option value="249">Estado Asociado De Granada</option>
+														<option value="288">Estados De Micronesia</option>
+														<option value="188">Estados Unidos</option>
+														<option value="138">Estonia</option>
+														<option value="253">Etiopia</option>
+														<option value="254">Fiji</option>
+														<option value="141">Filipinas</option>
+														<option value="140">Finlandia</option>
+														<option value="142">Francia</option>
+														<option value="255">Gabon</option>
+														<option value="193">Gales</option>
+														<option value="256">Gambia</option>
+														<option value="257">Georgia</option>
+														<option value="258">Ghana</option>
+														<option value="143">Gran Bretaña</option>
+														<option value="144">Grecia</option>
+														<option value="259">Groenlandia</option>
+														<option value="145">Guatemala</option>
+														<option value="146">Guayana Francesa</option>
+														<option value="200">Guinea</option>
+														<option value="260">Guinea Bissau</option>
+														<option value="261">Guinea Ecuatorial</option>
+														<option value="209">Haiti</option>
+														<option value="147">Holanda</option>
+														<option value="148">Honduras</option>
+														<option value="210">Hong Kong</option>
+														<option value="149">Hungria</option>
+														<option value="154">India</option>
+														<option value="151">Indonesia</option>
+														<option value="152">Inglaterra</option>
+														<option value="262">Irak</option>
+														<option value="150">Iran</option>
+														<option value="155">Irlanda</option>
+														<option value="308">Isla Bouvet</option>
+														<option value="263">Isla Christmas</option>
+														<option value="264">Isla De Man</option>
+														<option value="265">Isla De Norfolk</option>
+														<option value="266">Isla De San Pedro Y Miquelon</option>
+														<option value="153">Islandia</option>
+														<option value="267">Islas Azores</option>
+														<option value="268">Islas Caiman</option>
+														<option value="310">Islas Cocos</option>
+														<option value="269">Islas Cook</option>
+														<option value="270">Islas Del Canal</option>
+														<option value="314">Islas Feroe</option>
+														<option value="313">Islas Malvinas</option>
+														<option value="271">Islas Marianas</option>
+														<option value="272">Islas Salomon</option>
+														<option value="273">Islas Turcas Y Caicos</option>
+														<option value="274">Islas Virgenes Britanicas</option>
+														<option value="275">Islas Virgenes De Estados Unidos</option>
+														<option value="156">Israel</option>
+														<option value="157">Italia</option>
+														<option value="225">Jamaica</option>
+														<option value="158">Japon</option>
+														<option value="159">Jordania</option>
+														<option value="276">Kazajistan</option>
+														<option value="160">Kenia</option>
+														<option value="277">Kirguistan</option>
+														<option value="278">Kiribati</option>
+														<option value="302">Kosovo</option>
+														<option value="251">Kuwait</option>
+														<option value="279">Labuan</option>
+														<option value="280">Laos</option>
+														<option value="281">Lesotho</option>
+														<option value="218">Letonia</option>
+														<option value="161">Libano</option>
+														<option value="303">Libia</option>
+														<option value="216">Liechtenstein</option>
+														<option value="162">Lituania</option>
+														<option value="163">Luxemburgo</option>
+														<option value="282">Macao</option>
+														<option value="283">Macedonia</option>
+														<option value="284">Madagascar</option>
+														<option value="285">Madeira</option>
+														<option value="166">Malasia</option>
+														<option value="286">Malawi</option>
+														<option value="191">Mali</option>
+														<option value="164">Malta</option>
+														<option value="165">Marruecos</option>
+														<option value="217">Mauricio</option>
+														<option value="287">Mauritania</option>
+														<option value="167">Mexico</option>
+														<option value="289">Moldova</option>
+														<option value="198">Mongolia</option>
+														<option value="318">Montenegro</option>
+														<option value="290">Montserrat</option>
+														<option value="291">Mozambique</option>
+														<option value="292">Myanmar</option>
+														<option value="293">Namibia</option>
+														<option value="168">Nepal</option>
+														<option value="170">Nicaragua</option>
+														<option value="294">Niger</option>
+														<option value="169">Nigeria</option>
+														<option value="171">Noruega</option>
+														<option value="305">Nueva Caledonia</option>
+														<option value="172">Nueva Zelanda</option>
+														<option value="317">Oman</option>
+														<option value="194">Pakistan</option>
+														<option value="173">Panama</option>
+														<option value="10">Paraguay</option>
+														<option value="14">Perú</option>
+														<option value="315">Polinesia Francesa</option>
+														<option value="174">Polonia</option>
+														<option value="175">Portugal</option>
+														<option value="295">Principado De Monaco</option>
+														<option value="176">Puerto Rico</option>
+														<option value="252">Qatar</option>
+														<option value="207">Reino Unido</option>
+														<option value="242">Republica Centroafricana</option>
+														<option value="177">Republica Checa</option>
+														<option value="190">Republica De Cabo Verde</option>
+														<option value="131">Republica Dominicana</option>
+														<option value="304">Ruanda</option>
+														<option value="178">Rumania</option>
+														<option value="179">Rusia</option>
+														<option value="319">Saint Marteen</option>
+														<option value="306">Samoa Americana</option>
+														<option value="181">Senegal</option>
+														<option value="298">Serbia</option>
+														<option value="208">Singapur</option>
+														<option value="182">Siria</option>
+														<option value="296">Somalia</option>
+														<option value="180">Sudafrica</option>
+														<option value="183">Suecia</option>
+														<option value="184">Suiza</option>
+														<option value="297">Surinam</option>
+														<option value="195">Tailandia</option>
+														<option value="187">Taiwan</option>
+														<option value="299">Tanzania</option>
+														<option value="213">Timor Oriental</option>
+														<option value="186">Trinidad Tobago</option>
+														<option value="316">Tunez</option>
+														<option value="185">Turquia</option>
+														<option value="192">Ucrania</option>
+														<option value="15">Uruguay</option>
+														<option value="108">Venezuela</option>
+														<option value="212">Vietnam</option>
+														<option value="311">Yibuti</option>
+														<option value="189">Yugoslavia</option>
+														</select>
+												</div>
+												<div class="col-md-2">
+													Tipo
+													<select id='tipoDocId' class="form-control" data-val="true" data-val-number="The field TipoDocumentoId must be a number." data-val-required="Campo requerido" id="TipoDocumentoId" name="TipoDocumentoId" tabindex="6">
+														<option value=""></option>															
+														<option value="1" data-p10-reglavalidacion="^(\d{1,2}\.\d{3}\.\d{3}|\d{1,8})$">DNI</option><option value="2" data-p10-reglavalidacion="">LC</option><option value="3" data-p10-reglavalidacion="">CI</option><option value="4" data-p10-reglavalidacion="">LE</option><option value="5" data-p10-reglavalidacion="">LU</option><option value="7" data-p10-reglavalidacion="^(\d{2}-\d{1,8}-\d{1}|\d{4,11}|\d{2}-\d{1,2}\.\d{3}\.\d{3}-\d{1})$">CUIT</option>
+													</select>
+												</div>
+												<div class="col-md-3">
+													Documento
+													<input id="documentoId" type="text" class="form-control" />
+												</div>
+											</div>											
+											<div class="row">
+												<button id="btnGuardarPasajero" type="button" class="btn btn-warning" data-dismiss="modal" style="margin: 20px 20px 0px 250px;" >&nbsp; Guardar</button>
+											</div>
+										</div>
+										
+										<!-- Footer de la ventana -->
+										<div class="modal-footer">
+											<p style="text-align: left; font-size: 11;">Información requerida según la Resolución 1027/2005 de la Secretaría de Transporte del Ministerio de Planificación Federal, Inversiones Públicas y Servicios de la República Argentina</p>
+										</div>
+										
+									</div>
+								</div>
+								<input type="hidden" id="pasaje_fila" />
+								<input type="hidden" id="pasaje_columna" />
+								<input type="hidden" id="pasaje_text" />
+							</div>
+						</div>
+						<div class="col-md-4" style="padding: 5px 25px; text-align: right;">
+							Se encontraron <span>11</span> servicios
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+		<br> 
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+				<h3 style="color: white;">Servicios</h3>
+				<div id="servicios" style="padding: 5px; border-radius: 7px;"></div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+				<h3 id="titulo_planta" style="color: white; border-radius: 5px;">Planta</h3>
+				<div class="row">					
+					<div class="col-md-2 butacas"><img src="image/seat.png" />&nbsp Disponible</div>
+					<div class="col-md-2 butacas"><img src="image/seat_taken.png" />&nbsp Ocupada</div>
+					<div class="col-md-2 butacas"><img src="image/seat_selected.png" />&nbsp Seleccionada</div>
+				</div>
+				<br>
+				<div class="row">					
+					<div id="primer_piso" class="col-md-4 divPlanta" style="text-align: center;"></div>
+					<div id="planta_baja" class="col-md-4 divPlanta" style="text-align: center;"></div>
+					<div id="ls_pasajeros" class="col-md-4 divPlanta" style="text-align: center;"></div>
+				</div>
+			</div>
+		</div>	
+		<script src="js/index.js"></script>
+		
+	</body>
+</html>
