@@ -1,0 +1,44 @@
+body{
+	background-color: #333;				
+}
+.table{
+	background-color: #fff;
+}
+.alert{
+	margin: 5px;
+}
+
+.headers_planta{
+	background-color: #616161; 
+	color: white;
+}
+
+.divPlanta{
+	
+	border: 1px solid black;
+	border-radius: 5px;	
+}
+
+.p_primer_piso:hover{
+	background-color: #c2c2c2; 
+}
+
+.butacas{
+	
+	background-color: white; 
+	color: black; 
+	/*border-radius: 5px;*/
+}
+
+#ventana1{
+	
+	color: black;
+}
+
+.item_info_pasajero{
+	
+	margin: 10px 0px;
+    padding-left: 0px;
+    text-align: left;
+}
+    
